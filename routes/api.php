@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +17,10 @@ use Illuminate\Http\Request;
 //    return $request->user();
 //});
 
-Route::post('register', 'Auth\AuthController@register')->name('register');
+// Route::post('register', 'Auth\AuthController@register')->name('register');
+// Route::post('login', 'Auth\AuthController@login')->name('login');
+
+Route::post('/register', 'Auth\AuthController@register');
+Route::post('/login', 'Auth\AuthController@login');
+Route::post('/logout', 'Auth\AuthController@logout');
+Route::get('/user', 'Auth\AuthController@user');
